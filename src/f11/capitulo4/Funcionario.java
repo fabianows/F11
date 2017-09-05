@@ -1,12 +1,29 @@
 package f11.capitulo4;
 
 public class Funcionario{
-    String nomeFuncionario;
-    String departamentoFuncionario;
-    double salarioFuncionario;
-    Data dataEntradaNoBanco;
-    String RGFuncionario;
+    private String nomeFuncionario;
+    private String departamentoFuncionario;
+    private double salarioFuncionario;
+    private Data dataEntradaNoBanco;
+    private String RGFuncionario;
+    private int identificador = 0;
 
+
+    public Funcionario(){        
+    }
+    
+    public Funcionario(String nome, String departamento, String RG,  Double salario, int dia, int mes, int ano){
+        this.setNomeFuncionario(nome);
+        this.setDepartamentoFuncionario(departamento);
+        this.setRGFuncionario(RG);
+        this.setSalarioFuncionario(salario);
+
+        Data dataEntradaNoBanco = new Data(dia, mes, ano);        
+        
+        this.setDataEntradaNoBanco(dataEntradaNoBanco);
+        this.setIdentificador(1);
+    }
+    
     public void recebeAumento(double incrementoSalario) {
         setSalarioFuncionario(getSalarioFuncionario() + incrementoSalario);
     }
@@ -23,11 +40,19 @@ public class Funcionario{
         System.out.println("Salario atual: " + getSalarioFuncionario());
     }
     
+    public int getIdentificador() {
+        return identificador;
+    }
+
+    private void setIdentificador(int identificador) {
+        this.identificador += identificador;
+    }
+
     public String getNomeFuncionario() {
         return nomeFuncionario;
     }
 
-    public void setNomeFuncionario(String nomeFuncionario) {
+    private void setNomeFuncionario(String nomeFuncionario) {
         this.nomeFuncionario = nomeFuncionario;
     }
 
@@ -35,7 +60,7 @@ public class Funcionario{
         return departamentoFuncionario;
     }
 
-    public void setDepartamentoFuncionario(String departamentoFuncionario) {
+    private void setDepartamentoFuncionario(String departamentoFuncionario) {
         this.departamentoFuncionario = departamentoFuncionario;
     }
 
@@ -43,7 +68,7 @@ public class Funcionario{
         return salarioFuncionario;
     }
 
-    public void setSalarioFuncionario(double salarioFuncionario) {
+    private void setSalarioFuncionario(double salarioFuncionario) {
         this.salarioFuncionario = salarioFuncionario;
     }
 
@@ -51,7 +76,7 @@ public class Funcionario{
         return RGFuncionario;
     }
 
-    public void setRGFuncionario(String RGFuncionario) {
+    private void setRGFuncionario(String RGFuncionario) {
         this.RGFuncionario = RGFuncionario;
     }
 
@@ -59,7 +84,7 @@ public class Funcionario{
         return dataEntradaNoBanco;
     }
 
-    public void setDataEntradaNoBanco(Data dataEntradaNoBanco) {
+    private void setDataEntradaNoBanco(Data dataEntradaNoBanco) {
         this.dataEntradaNoBanco = dataEntradaNoBanco;
     }
 

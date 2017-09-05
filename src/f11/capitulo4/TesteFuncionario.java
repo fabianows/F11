@@ -4,12 +4,12 @@ class TesteFuncionario{
     public static void main(String[] args){        
         double valorDeAumento;       
        
-        Funcionario funcionario1 = new Funcionario();
-        funcionario1 = criaFuncionario("Carlos", "TI", "126548", 100.00, 01, 01, 1999);
+        Funcionario funcionario1 = new Funcionario("Carlos", "TI", "126548", 100.00, 01, 01, 1999);
+        //funcionario1 = criaFuncionario("Carlos", "TI", "126548", 100.00, 01, 01, 1999);
 
-        Funcionario funcionario2 = new Funcionario();        
-        funcionario2 = criaFuncionario("Jose", "RH", "9563624", 150.22, 31, 12, 2000);
-
+        Funcionario funcionario2 = new Funcionario("Jose", "RH", "9563624", 150.22, 31, 12, 2000);
+        //funcionario2 = criaFuncionario("Jose", "RH", "9563624", 150.22, 31, 12, 2000);
+        
         comparaFuncionarios(funcionario1, funcionario2);
         
         funcionario1.mostra();
@@ -23,7 +23,7 @@ class TesteFuncionario{
         funcionario2.mostra();
         
     }
-    
+/*    
     public static Funcionario criaFuncionario(String nome, String departamento, String RG,  Double salario, int dia, int mes, int ano){
         Funcionario funcionario = new Funcionario();      
 
@@ -41,7 +41,7 @@ class TesteFuncionario{
         
         return funcionario;
     }
-    
+*/    
     private static void comparaFuncionarios(Funcionario f1, Funcionario f2){
         if (f1.getRGFuncionario() == f2.getRGFuncionario()){
             System.out.println("Os dois funcionarios são iguais");

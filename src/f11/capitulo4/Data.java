@@ -1,10 +1,18 @@
 package f11.capitulo4;
 
 public class Data {
-    int dia;
-    int mes;
-    int ano;
+    private int dia;
+    private int mes;
+    private int ano;
     
+    public Data(){        
+    }
+    public Data(int dia, int mes, int ano){
+        this.setDia(dia);
+        this.setMes(mes);
+        this.setAno(ano);
+        
+    }
     public String dataFormatada(){
         String dia = Integer.toString(this.getDia());
         String mes = Integer.toString(this.getMes());
