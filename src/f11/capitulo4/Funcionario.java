@@ -1,9 +1,9 @@
 package f11.capitulo4;
 
-public class Funcionario{
+abstract class Funcionario{
     private String nomeFuncionario;
     private String departamentoFuncionario;
-    private double salarioFuncionario;
+    protected double salarioFuncionario;
     private Data dataEntradaNoBanco;
     private String RGFuncionario;
     private int identificador = 0;
@@ -23,11 +23,13 @@ public class Funcionario{
         this.setDataEntradaNoBanco(dataEntradaNoBanco);
         this.setIdentificador(1);
     }
-    
+
+    abstract double getBonificacao();
+
     public void recebeAumento(double incrementoSalario) {
         setSalarioFuncionario(getSalarioFuncionario() + incrementoSalario);
     }
-    
+
     public Double calculaGanhoAnual(){
         return getSalarioFuncionario() * 12;
     }
