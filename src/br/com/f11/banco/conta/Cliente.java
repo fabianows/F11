@@ -1,6 +1,6 @@
 package br.com.f11.banco.conta;
 
-class Cliente {
+public class Cliente {
     private String nome;
     private String endereco;
     private String cpf;
