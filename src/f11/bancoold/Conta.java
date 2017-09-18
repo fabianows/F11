@@ -1,4 +1,6 @@
-package f11.banco;
+package f11.bancoold;
+
+import br.com.f11.banco.conta.Cliente;
 
 class Conta {
 

@@ -1,4 +1,4 @@
-package f11.banco;
+package br.com.f11.banco.conta;
 
 class Cliente {
     private String nome;

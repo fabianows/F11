@@ -1,4 +1,6 @@
-package f11.novobanco;
+package br.com.f11.banco.sistema;
+
+import br.com.f11.banco.conta.Conta;
 
 public class AtualizadorDeContas {
 

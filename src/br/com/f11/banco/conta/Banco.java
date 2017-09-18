@@ -1,4 +1,6 @@
-package f11.novobanco;
+package br.com.f11.banco.conta;
+
+import br.com.f11.banco.conta.Conta;
 
 public class Banco {
     Conta[] conta;

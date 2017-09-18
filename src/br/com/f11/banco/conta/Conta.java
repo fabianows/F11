@@ -1,11 +1,15 @@
-package f11.novobanco;
+package br.com.f11.banco.conta;
 
 public abstract class Conta {
 
-    protected double saldo;
+    public double saldo;
 
     public void deposita(double valor) {
-        this.saldo += valor;
+        if (valor < 0) {
+            throw new ValorInvalidoException(valor);
+        } else {
+            this.saldo += valor;
+        }
     }
 
     public void saca(double valor) {
